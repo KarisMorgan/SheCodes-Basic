@@ -1,6 +1,6 @@
-# SheCodes-Basic
+# A collection of my projects for SheCodes
 
-Two projects that were created for the She Codes Basic Certification
+#She Codes Basic Certification
 
 Topics: Hobbies + Interests
 
