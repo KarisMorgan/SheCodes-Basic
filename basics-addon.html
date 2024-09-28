@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Project</title>
+    <style>
+      body {
+        background: linear-gradient(
+          270deg,
+          #595cffff,
+          #7371ffff,
+          #8d87ffff,
+          #a79cffff,
+          #c1b2ffff,
+          #dbc7ffff
+        );
+      }
+
+      h2 {
+        text-decoration: underline;
+      }
+
+      p {
+        line-height: 2;
+      }
+      .container {
+        text-align: center;
+        max-width: 600px;
+        background: white;
+        border-radius: 30px;
+        margin: 20px auto;
+        border: 3px solid black;
+      }
+      .wikipedia {
+        border: 3px solid black;
+      }
+      img {
+        max-width: 500px;
+        border-radius: 20px;
+        transition: all 200ms ease-in-out;
+      }
+
+      img:hover {
+        transform: scale(1.2);
+      }
+      button {
+        font-size: 15px;
+        display: block;
+        margin: 0 auto;
+        padding: 15px;
+        border-radius: 30px;
+        transition: all 150ms ease-in-out;
+        color: #595cff;
+        background: #dbc7ff;
+        border: 3px solid black;
+      }
+
+      .theme:hover {
+        background: black;
+        color: white;
+      }
+      button:hover {
+        background-color: #7371ff;
+        color: #dbc7ff;
+      }
+      footer {
+        color: white;
+        text-align: center;
+      }
+      a {
+        color: white;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+        margin: 10px;
+      }
+      .grid img {
+        width: 100%;
+      }
+
+      .dark {
+        background: linear-gradient(
+          112.1deg,
+          rgb(32, 38, 57) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+        color: white;
+      }
+      .dark .container {
+        background: rgb(255, 255, 255, 0.2);
+        border: 3px solid white;
+      }
+
+      .dark button {
+        border: 3px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme">Change theme</button>
+    <div class="container">
+      <h1>Nail Art 💅</h1>
+      <h2>My favourite creative outlet</h2>
+      <hr />
+      <a href="https://en.wikipedia.org/wiki/Nail_art"
+        ><img
+          class="wikipedia"
+          src="https://images.fresha.com/locations/location-profile-images/711656/1473980/b5ab4f52-7ea5-4c91-835e-4beb38167f77.jpg?class=gallery-modal-large&dpr=2&watermark=true"
+      /></a>
+      <div class="grid">
+        <img
+          src="https://images.fresha.com/locations/location-profile-images/711656/1473981/97661665-5186-4d59-a08e-6bd86e3715d1-TechNailz-GB-Wales-Cardiff-Fresha.jpg?class=gallery-modal-large&dpr=2&watermark=true"
+        />
+        <img
+          src="https://images.fresha.com/locations/location-profile-images/711656/1473982/d9cf9f89-1c82-43a9-b50c-ed6e2625326d-TechNailz-GB-Wales-Cardiff-Fresha.jpg?class=gallery-modal-large&dpr=2&watermark=true"
+        />
+        <img
+          src="https://images.fresha.com/locations/location-profile-images/711656/1473983/5fa405b9-3d1d-49af-85d2-981a7e56bd05-TechNailz-GB-Wales-Cardiff-Fresha.jpg?class=gallery-modal-large&dpr=2&watermark=true"
+        />
+      </div>
+      <hr />
+      <p>
+        Nail art is a creative way to paint, decorate, enhance, and embellish
+        nails. I enjoy adding painting tiny art on little canvases, it can be
+        stressful sometimes, but the result is always worth it!
+      </p>
+
+      <a href="https://www.instagram.com/technailzz/"
+        ><button>Check out my instagram!</button></a
+      >
+      <br />
+    </div>
+    <footer>
+      Coded with 💜 by
+      <a href="https://www.shecodes.io/graduates/57669-karis-morgan"
+        >Karis Morgan</a
+      >, 2022
+    </footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
